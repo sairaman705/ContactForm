@@ -1,0 +1,230 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #eaf4f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+form h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.col {
+    flex: 1;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #007f5f;
+}
+
+.inptTxt,
+.txt-msg,
+input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #007f5f;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #007f5f;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.querry {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #007f5f;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+}
+
+.col-check {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.check-content {
+    font-size: 0.9rem;
+    color: #007f5f;
+    margin-left: 0.5rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007f5f;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f46;
+}
+
+/* success message */
+.success-message {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007f5f;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    form h2 {
+        font-size: 1.25rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .radio-group {
+        flex-direction: column;
+    }
+
+    .querry {
+        padding: 0.5rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    .inptTxt,
+    .txt-msg,
+    input[type="email"],
+    textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}
+
+/* to handel error messages */
+.error-message{
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    color: rgb(251, 21, 21);
+    display: none;
+}
+
+input.error,
+textarea.error,
+.radio-group.error {
+    border: 1px solid rgb(251, 21, 21);
+}
+
+.radio-group.error label{
+    color: rgb(251, 21, 21);
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    form h2 {
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 0.85rem;
+    }
+
+    .inptTxt,
+    .txt-msg,
+    input[type="email"],
+    textarea {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}
